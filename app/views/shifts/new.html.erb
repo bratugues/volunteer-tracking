@@ -1,0 +1,6 @@
+<h1 class = "mt-3">Add new event for <%=@volunteer.name%></h1>
+<%= simple_form_for [@volunteer, @shift] do |f| %>
+  <%= f.association :event, prompt: "Please select an event..." %>
+  <%= f.input :feedback %>
+  <%= f.submit "Add event", class: "btn btn-primary" %>
+<% end %>
