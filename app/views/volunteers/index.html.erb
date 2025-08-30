@@ -1,0 +1,9 @@
+<h1>Volunteers</h1>
+<hr>
+<%@volunteers.each do |volunteer|%>
+  <ul>
+    <li><%=link_to volunteer.name, volunteer_path(volunteer)%></li>
+  </ul>
+<%end%>
+<hr>
+<%=link_to "Create a new volunteer", new_volunteer_path%>
